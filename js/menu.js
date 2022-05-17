@@ -27,7 +27,7 @@ jQuery(document).ready(function() {
         'tr':{
 
             '0':'Chania',
-            '1':'Uçuş',
+            'hasan':'Uçuş',
             '2':'Şehir',
             '3':'Ada',
             '4':'Yemek',
@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
 
         'en':{
             '0':'Chania',
-            '1':'The Flight',
+            'hasan':'The Flight',
             '2':'The City',
             '3':'The Island',
             '4':'The Food',
@@ -62,6 +62,25 @@ jQuery(document).ready(function() {
             '12':'You can reach Chania airport from all over Europe.',
             '13':'Resize the browser window to see how the content respond to the resizing.'
         },
+        
+        'de':{
+            '0':'Alm',
+            'hasan':'Was machst du?',
+            '2':'The City',
+            '3':'The Island',
+            '4':'The Food',
+            '5':'The City',
+            '6':'Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.',
+            '7':'What?',
+            '8':'Chania is a city on the island of Crete.',
+            '9':'Where?',
+            '10':'Crete is a Greek island in the Mediterranean Sea.',
+            '11':'How?',
+            '12':'You can reach Chania airport from all over Europe.',
+            '13':'Resize the browser window to see how the content respond to the resizing.'
+        },
+
+
         
         
     };
@@ -79,11 +98,13 @@ $('.dropdown-item').click(function() {
     if(lang=="en"){
         $("#drop_yazı").html("English");
     }
-    else{
+    if(lang=="tr"){
         $("#drop_yazı").html("Türkçe");
-
     }
-
+    if(lang=="de"){
+        $("#drop_yazı").html("Deutsch");
+    }        
+    
     $('a,h5,p,h1,h2,span,li,button,h3,label').each(function(index,element) {
       $(this).text(arrLang[lang][$(this).attr('key')]);
     
